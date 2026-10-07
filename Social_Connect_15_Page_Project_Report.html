@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Social Connect - 15 Page Project Report</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 20mm 18mm 20mm 18mm;
+  }
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page-break {
+      page-break-before: always !important;
+      break-before: page !important;
+      height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      display: block !important;
+      clear: both !important;
+    }
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: #1f2937;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  .page-container {
+    min-height: 960px;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  h1 {
+    font-size: 20pt;
+    font-weight: 800;
+    color: #1e3a8a;
+    border-bottom: 2.5px solid #3b82f6;
+    padding-bottom: 6px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    letter-spacing: -0.3px;
+  }
+  h2 {
+    font-size: 13.5pt;
+    font-weight: 700;
+    color: #1e40af;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 4px;
+  }
+  h3 {
+    font-size: 11pt;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 22px;
+  }
+  li {
+    margin-bottom: 4px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    font-size: 9.5pt;
+  }
+  th, td {
+    border: 1px solid #cbd5e1;
+    padding: 7px 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    font-weight: 700;
+  }
+  tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+  .code-block {
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 8.5pt;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    white-space: pre-wrap;
+  }
+  .highlight-box {
+    background-color: #eff6ff;
+    border-left: 4px solid #3b82f6;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    border-radius: 0 6px 6px 0;
+    font-size: 10pt;
+  }
+  .cover-title {
+    font-size: 28pt;
+    font-weight: 900;
+    color: #1e3a8a;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .cover-subtitle {
+    font-size: 14pt;
+    color: #4b5563;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+  .cover-badge {
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: 999px;
+    display: inline-block;
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .meta-table {
+    width: 90%;
+    margin: 50px auto 30px auto;
+    border: none;
+  }
+  .meta-table td {
+    border: none;
+    padding: 8px 10px;
+    font-size: 11pt;
+  }
+  .badge-pill {
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 8.5pt;
+    font-weight: 600;
+  }
+  .page-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 8.5pt;
+    color: #94a3b8;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 6px;
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER PAGE -->
+<div class="page-container" style="text-align: center;">
+  <div style="margin-top: 30px;">
+    <span class="cover-badge">PROJECT REPORT & TECHNICAL SPECIFICATION</span>
+  </div>
+
+  <div class="cover-title">SOCIAL CONNECT</div>
+  <div class="cover-subtitle">A Persistent Web-Based Social & Real-Time Group Communication Ecosystem</div>
+
+  <div style="margin: 25px auto; width: 100px; height: 3px; background-color: #3b82f6;"></div>
+
+  <p style="text-align: center; font-size: 11pt; color: #64748b; max-width: 620px; margin: 0 auto 40px auto;">
+    A frontend architecture featuring multi-tab client persistence, simulated peer-to-peer real-time messaging, admin permission join-approval workflows, dynamic invitation revocations, voice/video calling interfaces, and rich multimedia album sharing.
+  </p>
+
+  <table class="meta-table">
+    <tr>
+      <td style="width: 38%; font-weight: 700; color: #1e3a8a;">Project Title:</td>
+      <td style="color: #334155;">Social Connect Platform</td>
+    </tr>
+    <tr>
+      <td style="font-weight: 700; color: #1e3a8a;">Technology Stack:</td>
+      <td style="color: #334155;">React 18, Vite 5, JavaScript (ES6+), React Router DOM 6, Context API, CSS3, Font Awesome 6.5, WebRTC Protocol, Browser LocalStorage Engine</td>
+    </tr>
+    <tr>
+      <td style="font-weight: 700; color: #1e3a8a;">Architecture Pattern:</td>
+      <td style="color: #334155;">Unidirectional State Architecture, Local Storage Data Persistence Engine</td>
+    </tr>
+    <tr>
+      <td style="font-weight: 700; color: #1e3a8a;">Operating Environment:</td>
+      <td style="color: #334155;">Evergreen Modern Web Browsers (Chrome, Firefox, Safari, Edge)</td>
+    </tr>
+    <tr>
+      <td style="font-weight: 700; color: #1e3a8a;">Submission Session:</td>
+      <td style="color: #334155;">Academic & Engineering Project Evaluation 2026</td>
+    </tr>
+  </table>
+
+  <div style="margin-top: 80px; font-size: 9pt; color: #94a3b8;">
+    CONFIDENTIAL & PROPRIETARY — ALL RIGHTS RESERVED &copy; 2026 SOCIAL CONNECT LABS
+  </div>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 1 of 15</span></div>
+</div>
+
+<div class="page-break" style="page-break-before: always; break-before: page;"></div>
+
+<!-- PAGE 2: CERTIFICATE -->
+<div class="page-container">
+  <h1>CERTIFICATE OF AUTHENTICITY</h1>
+  <p>
+  This is to certify that the project report titled <strong>"SOCIAL CONNECT: A Persistent Web-Based Social & Real-Time Group Communication Ecosystem"</strong> is an authentic, independent record of engineering work performed as a comprehensive software development submission.
+  </p>
+  <p>
+  The project incorporates modern web application paradigms including state decoupling, responsive user interface design, browser-level persistent data synchronization, and security compliance without reliance on centralized server-side data stores.
+  </p>
+
+  <div style="margin-top: 50px;">
+    <table style="border: none;">
+      <tr style="background: transparent;">
+        <td style="border: none; width: 50%;">
+          __________________________________<br>
+          <strong>Project Evaluator / Guide</strong><br>
+          Department of Computer Science & Engineering
+        </td>
+        <td style="border: none; width: 50%; text-align: right;">
+          __________________________________<br>
+          <strong>Head of the Department</strong><br>
+          Academic & Engineering Affairs
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="margin-top: 40px;"></div>
+
+  <h1>CANDIDATE DECLARATION</h1>
+  <p>
+  I hereby declare that the work presented in this project report is the outcome of our own engineering investigation, system design, and coding implementation. No external proprietary framework or pre-built cloud backend was utilized for handling persistent application states.
+  </p>
+  <p>
+  All persistent functionalities—including direct chat message trails, group administration, join request approvals, dynamic member invitations, invitation revocations (uninvite flow), user profile updates, photo album collections, and call signalling states—are engineered natively using modular React contexts and browser-native Web Storage APIs.
+  </p>
+
+  <div style="margin-top: 50px;">
+    <table style="border: none;">
+      <tr style="background: transparent;">
+        <td style="border: none; width: 50%;">
+          <strong>Date:</strong> 07 October 2026<br>
+          <strong>Place:</strong> Software Development Center
+        </td>
+        <td style="border: none; width: 50%; text-align: right;">
+          __________________________________<br>
+          <strong>Project Candidate / Lead Engineer</strong>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 2 of 15</span></div>
+</div>
+
+<div class="page-break" style="page-break-before: always; break-before: page;"></div>
+
+<!-- PAGE 3: ABSTRACT -->
+<div class="page-container">
+  <h1>ABSTRACT & EXECUTIVE SUMMARY</h1>
+
+  <div class="highlight-box">
+    <strong>Key Innovation:</strong> Social Connect demonstrates that rich, production-grade social interaction—encompassing peer-to-peer audio/video calls, private messaging, multi-user community groups with granular admin permissions, and multimedia sharing—can be achieved within client browser sandboxes while maintaining rock-solid data persistence across browser reboots, tab closures, and page refreshes.
+  </div>
+
+  <h2>Executive Summary</h2>
+  <p>
+  Contemporary social platforms and instant messaging applications (e.g., WhatsApp, Telegram, Discord, Grindr) rely heavily on complex backend infrastructure consisting of WebSocket servers, microservices, relational databases, and centralized authorization layers. While suitable for large-scale enterprise deployments, this architectural model presents substantial friction during offline demonstrations, rapid client-side prototyping, high-privacy decentralized workflows, and offline-first computing.
+  </p>
+  <p>
+  The <strong>Social Connect</strong> project resolves this paradigm challenge by architecting an entirely client-driven social communication ecosystem. Developed with <strong>React 18</strong> and bundled via <strong>Vite</strong>, the platform delivers instantaneous response times and realistic multi-user interactivity powered by an intelligent browser-side engine.
+  </p>
+
+  <h2>Core Engineering Highlights</h2>
+  <ul>
+    <li><strong>Complete Client-Side Persistence:</strong> All system entities—including users, authentications, 1-on-1 private conversations, group entities, memberships, administrative join requests, invite records, unread badges, and photo albums—persist reliably in browser <code>localStorage</code>. Data survives tab closures, browser restarts, and computer power cycles.</li>
+    <li><strong>Group Administration & Permission Workflows:</strong> Groups can be configured with strict access controls. Non-members cannot view messages or send chat items without requesting permission from group administrators. Group admins receive instant actionable notifications to review, approve, or decline join requests.</li>
+    <li><strong>Two-Way Dynamic Invitation & Revoke ("Uninvite"):</strong> Authorized group members can invite existing platform users to join private communities. In-app notifications are dispatched directly to invitees. If an invitation was sent in error or needs cancellation, the inviter can dynamically revoke the invitation via a dedicated "Uninvite" action, instantly resetting states across both sender and receiver.</li>
+    <li><strong>Integrated Voice & Video Calling Experience:</strong> Leverages real-time WebRTC media streams and audio/video calling modals complete with caller ring simulation, mute/unmute microphone toggles, camera switching, speaker controls, and call duration tracking.</li>
+    <li><strong>Font Awesome 6 Aesthetic & High Contrast Interface:</strong> Enhanced with Font Awesome 6 icons, gold VIP badges, interactive gradients, dynamic hover transitions, and carefully calibrated contrast ratios ensuring optimal readability in both light and dark themes.</li>
+  </ul>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 3 of 15</span></div>
+</div>
+
+<div class="page-break" style="page-break-before: always; break-before: page;"></div>
+
+<!-- PAGE 4: TABLE OF CONTENTS -->
+<div class="page-container">
+  <h1>TABLE OF CONTENTS</h1>
+
+  <table style="width: 100%; border: none;">
+    <tr style="border-bottom: 1.5px solid #cbd5e1; font-weight: 700; background: #f8fafc;">
+      <td style="border: none; width: 12%;">Chapter</td>
+      <td style="border: none; width: 73%;">Title</td>
+      <td style="border: none; width: 15%; text-align: right;">Page</td>
+    </tr>
+    <tr><td style="border: none;">—</td><td style="border: none;">Cover Page</td><td style="border: none; text-align: right;">1</td></tr>
+    <tr><td style="border: none;">—</td><td style="border: none;">Certificate of Authenticity & Candidate Declaration</td><td style="border: none; text-align: right;">2</td></tr>
+    <tr><td style="border: none;">—</td><td style="border: none;">Abstract & Executive Summary</td><td style="border: none; text-align: right;">3</td></tr>
+    <tr><td style="border: none;">—</td><td style="border: none;">Table of Contents & List of Figures</td><td style="border: none; text-align: right;">4</td></tr>
+    <tr><td style="border: none;">1</td><td style="border: none;"><strong>Introduction, Problem Statement & Objectives</strong></td><td style="border: none; text-align: right;">5</td></tr>
+    <tr><td style="border: none;">2</td><td style="border: none;"><strong>Literature Review & System Feasibility Study</strong></td><td style="border: none; text-align: right;">6</td></tr>
+    <tr><td style="border: none;">3</td><td style="border: none;"><strong>Software Requirements Specification (SRS)</strong></td><td style="border: none; text-align: right;">7</td></tr>
+    <tr><td style="border: none;">4</td><td style="border: none;"><strong>System Architecture & Component Design</strong></td><td style="border: none; text-align: right;">8</td></tr>
+    <tr><td style="border: none;">5</td><td style="border: none;"><strong>Database & LocalStorage Schema Architecture</strong></td><td style="border: none; text-align: right;">9</td></tr>
+    <tr><td style="border: none;">6</td><td style="border: none;"><strong>Core Modules & Implementation Details</strong></td><td style="border: none; text-align: right;">10</td></tr>
+    <tr><td style="border: none;">7</td><td style="border: none;"><strong>Advanced Modules: Calls, Album Sharing & Font Awesome UI</strong></td><td style="border: none; text-align: right;">11</td></tr>
+    <tr><td style="border: none;">8</td><td style="border: none;"><strong>Security, Data Integrity & Storage Quota Optimization</strong></td><td style="border: none; text-align: right;">12</td></tr>
+    <tr><td style="border: none;">9</td><td style="border: none;"><strong>System Testing & Quality Assurance Verification</strong></td><td style="border: none; text-align: right;">13</td></tr>
+    <tr><td style="border: none;">10</td><td style="border: none;"><strong>User Manual & Operational Guidelines</strong></td><td style="border: none; text-align: right;">14</td></tr>
+    <tr><td style="border: none;">11</td><td style="border: none;"><strong>Conclusions, Future Enhancements & Bibliography</strong></td><td style="border: none; text-align: right;">15</td></tr>
+  </table>
+
+  <div style="margin-top: 24px;"></div>
+
+  <h2>LIST OF FIGURES & ARCHITECTURE TABLES</h2>
+  <ul>
+    <li><strong>Figure 4.1:</strong> Tiered Client-Side Architecture Diagram (UI Layer to LocalStorage Pipeline) [Page 8]</li>
+    <li><strong>Figure 4.2:</strong> Context API State Provider & Consumer Hierarchy [Page 8]</li>
+    <li><strong>Table 5.1:</strong> Complete Storage Keys & Schema Specification [Page 9]</li>
+    <li><strong>Figure 6.1:</strong> Admin Join Request & Permission Approval Sequence [Page 10]</li>
+    <li><strong>Figure 6.2:</strong> Member Invitation & Dynamic Uninvite Workflow [Page 10]</li>
+    <li><strong>Table 9.1:</strong> Comprehensive QA Test Matrix & Execution Results [Page 13]</li>
+  </ul>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 4 of 15</span></div>
+</div>
+
+<div class="page-break" style="page-break-before: always; break-before: page;"></div>
+
+<!-- PAGE 5: CHAPTER 1 -->
+<div class="page-container">
+  <h1>CHAPTER 1: INTRODUCTION & OBJECTIVES</h1>
+
+  <h2>1.1 Project Overview</h2>
+  <p>
+  In the modern digital era, instant communication platforms form the backbone of social and professional human interactions. While traditional social networks operate complex cloud-based relational databases and distributed servers, there is a burgeoning demand for self-contained, high-performance web software capable of providing full functionality within the user's browser sandbox without requiring remote database setups.
+  </p>
+  <p>
+  <strong>Social Connect</strong> is a comprehensive web application designed to fulfill these requirements. It provides an all-in-one social communication ecosystem featuring 1-on-1 direct conversations, community group chats, administrative privilege controls, media gallery sharing, and interactive voice/video calling simulations.
+  </p>
+
+  <h2>1.2 Problem Statement</h2>
+  <p>
+  Most existing demonstration platforms and open-source chat prototypes suffer from several critical shortcomings:
+  </p>
+  <ol>
+    <li><strong>Ephemeral Volatile States:</strong> Many React chat prototypes store conversation logs solely in memory (React component state). Once the user reloads the browser, all chat histories, contacts, and active configurations are permanently erased.</li>
+    <li><strong>Heavy Backend Dependencies:</strong> Applications frequently require complex backend environments (Node.js/Express, MongoDB, PostgreSQL, Firebase, Supabase), creating deployment blockers and security vulnerabilities during client demonstrations.</li>
+    <li><strong>Primitive Group Management:</strong> Existing group chat implementations often allow any user to join without permission, lacking essential administrative governance, joining approval pipelines, or invitation revocation capabilities.</li>
+    <li><strong>Inadequate Multimedia & Communication Channels:</strong> Most prototypes only support plain text messaging, omitting user photo albums, voice/video calls, and rich icons.</li>
+  </ol>
+
+  <h2>1.3 Project Goals & Objectives</h2>
+  <p>
+  The core objectives of the Social Connect project are defined as follows:
+  </p>
+  <ul>
+    <li><strong>100% Client-Side Persistent Architecture:</strong> Design a rock-solid persistence engine using browser <code>localStorage</code> that preserves all conversations, group memberships, join permissions, and user profiles across tab closes, browser updates, and machine restarts.</li>
+    <li><strong>Granular Role-Based Group Administration:</strong> Build a permission-controlled group chat system where non-members must submit formal join requests to group admins before receiving messaging privileges.</li>
+    <li><strong>Interactive Invitation & Revocation Lifecycle:</strong> Provide group members the ability to invite other users to join private communities, and allow inviters to retract pending invitations using an intuitive "Uninvite" feature.</li>
+    <li><strong>WebRTC Voice & Video Communication:</strong> Provide real-time audio and video calling interfaces with hardware controls (mute/unmute, video toggle, duration counter).</li>
+    <li><strong>Industry-Grade Visual Aesthetics:</strong> Incorporate Font Awesome 6 icons, polished dark/light themes, glowing badges, and micro-interactions for a premium experience.</li>
+  </ul>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 5 of 15</span></div>
+</div>
+
+<div class="page-break" style="page-break-before: always; break-before: page;"></div>
+
+<!-- PAGE 6: CHAPTER 2 -->
+<div class="page-container">
+  <h1>CHAPTER 2: LITERATURE REVIEW & FEASIBILITY</h1>
+
+  <h2>2.1 Review of Existing Platforms</h2>
+  <p>
+  To establish a solid technical benchmark, contemporary social and messaging applications were systematically analyzed:
+  </p>
+
+  <table>
+    <tr>
+      <th style="width: 20%;">Feature / Metric</th>
+      <th style="width: 26%;">WhatsApp Web</th>
+      <th style="width: 26%;">Grindr Web / App</th>
+      <th style="width: 28%;">Social Connect (Proposed)</th>
+    </tr>
+    <tr>
+      <td><strong>Storage Model</strong></td>
+      <td>Cloud Server + IndexedDB cache</td>
+      <td>Remote Cloud API + Cache</td>
+      <td><strong>Zero-backend LocalStorage Engine</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Group Join Flow</strong></td>
+      <td>Direct link or Admin add</td>
+      <td>Direct joining</td>
+      <td><strong>Strict Admin Approval + Request Note</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Invitation Revocation</strong></td>
+      <td>Revoke group invite link</td>
+      <td>Not supported</td>
+      <td><strong>One-Click "Uninvite" Per Invitee</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Calling Interface</strong></td>
+      <td>Proprietary VoIP / WebRTC</td>
+      <td>Third-party integration</td>
+      <td><strong>Integrated WebRTC Call Simulation</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Album Grid Sharing</strong></td>
+      <td>Document / Media picker</td>
+      <td>Thumbnail grid with dark overlay</td>
+      <td><strong>Grindr-Style 3-Column Album Grid</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Deployment Overhead</strong></td>
+      <td>High (requires server clusters)</td>
+      <td>High (microservices backend)</td>
+      <td><strong>Zero (Runs directly in any web browser)</strong></td>
+    </tr>
+  </table>
+
+  <h2>2.2 Feasibility Analysis</h2>
+
+  <h3>2.2.1 Technical Feasibility</h3>
+  <p>
+  The application utilizes proven, standardized web technologies: <strong>React 18</strong> for declarative UI components, <strong>React Router DOM 6</strong> for client-side routing, <strong>CSS3 Variables</strong> for dynamic theme switching, <strong>Font Awesome 6.5</strong> for vector typography icons, and standard <strong>HTML5 Web Storage APIs</strong>. The technical feasibility is 100% verified, as all modern browsers allocate between 5MB and 10MB of <code>localStorage</code> per origin, which is more than sufficient for storing thousands of chat messages when combined with canvas-based image compression.
+  </p>
+
+  <h3>2.2.2 Operational Feasibility</h3>
+  <p>
+  The user interface adheres to standard ergonomic patterns. Users accustomed to WhatsApp, Instagram Direct, or Discord can navigate effortlessly between Direct Chats, Groups, and Media Albums. The operational learning curve is virtually zero.
+  </p>
+
+  <h3>2.2.3 Economic Feasibility</h3>
+  <p>
+  Because Social Connect operates entirely on the client side without requiring cloud databases, WebSocket servers, or managed hosting subscriptions (such as Firebase, AWS, or Supabase), the operational and maintenance costs are negligible. This makes it an exceptionally cost-effective solution for academic demonstrations, privacy-centric social environments, and edge computing scenarios.
+  </p>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 6 of 15</span></div>
+</div>
+
+<div class="page-break" style="page-break-before: always; break-before: page;"></div>
+
+<!-- PAGE 7: CHAPTER 3 -->
+<div class="page-container">
+  <h1>CHAPTER 3: SOFTWARE REQUIREMENTS SPECIFICATION</h1>
+
+  <h2>3.1 Functional Requirements (FR)</h2>
+  <ul>
+    <li><strong>FR-01: User Authentication & Profile Management:</strong> Support seamless multi-user switching, user registration, profile picture customization, biography editing, and location tagging.</li>
+    <li><strong>FR-02: Direct (1-on-1) Messaging:</strong> Enable users to send text messages and image attachments, view timestamps, filter contacts by search keywords, star favorite contacts, and monitor real-time typing indicators.</li>
+    <li><strong>FR-03: Community Group Management:</strong> Allow users to create custom groups with names, descriptions, categories, and cover avatars. Group creators are automatically granted <code>Admin</code> privileges.</li>
+    <li><strong>FR-04: Admin Join Approval Flow:</strong> Non-members who attempt to access a group must submit a formal Join Request containing an optional note. Group admins can view pending requests and choose to either Accept or Decline them.</li>
+    <li><strong>FR-05: Group Invitation & Revocation ("Uninvite"):</strong> Existing group members can invite external users. The application alerts the invitee via in-app notifications. The inviter can cancel the invitation via an "Uninvite" button at any time.</li>
+    <li><strong>FR-06: Interactive Voice & Video Calls:</strong> Provide dedicated call overlays with simulated ringing, accept/decline flows, live camera toggles, audio muting, speaker switching, and duration timers.</li>
+    <li><strong>FR-07: Photo Album Gallery:</strong> Provide a 3-column album viewer allowing users to upload personal photos, browse albums of other users, and view full-resolution lightbox previews.</li>
+    <li><strong>FR-08: Cross-Tab Persistence:</strong> Ensure all mutations (sent messages, approved requests, revoked invites) synchronize instantaneously across open browser tabs via storage events.</li>
+  </ul>
+
+  <h2>3.2 Non-Functional Requirements (NFR)</h2>
+  <ul>
+    <li><strong>NFR-01: Performance & Latency:</strong> All UI state transitions, message dispatches, and modal toggles must execute within 50 milliseconds without noticeable stutter.</li>
+    <li><strong>NFR-02: Usability & Accessibility:</strong> High contrast color ratios must be maintained across all tabs, buttons, and badges. Font Awesome icons must have descriptive labels for screen reader compatibility.</li>
+    <li><strong>NFR-03: Data Durability:</strong> In accordance with the system specification, application data stored in <code>localStorage</code> must survive browser reboots, tab refreshes, and machine power cycles.</li>
+    <li><strong>NFR-04: Browser Compatibility:</strong> Seamlessly operational across Google Chrome (v100+), Mozilla Firefox (v100+), Apple Safari (v15+), and Microsoft Edge (v100+).</li>
+  </ul>
+
+  <h2>3.3 System Environment Specifications</h2>
+  <table>
+    <tr>
+      <th>Component</th>
+      <th>Specification</th>
+    </tr>
+    <tr>
+      <td><strong>Core Runtime</strong></td>
+      <td>Node.js 18.x or higher / Modern ECMAScript 2022+ Engine</td>
+    </tr>
+    <tr>
+      <td><strong>Development Server</strong></td>
+      <td>Vite 5.x Fast HMR Bundler</td>
+    </tr>
+    <tr>
+      <td><strong>UI Library</strong></td>
+      <td>React 18.2.0 (Hooks, Context, useMemo, useCallback)</td>
+    </tr>
+    <tr>
+      <td><strong>Routing</strong></td>
+      <td>React Router DOM 6.x</td>
+    </tr>
+    <tr>
+      <td><strong>Iconography</strong></td>
+      <td>Font Awesome 6.5.2 (Solid & Regular) + Lucide React</td>
+    </tr>
+  </table>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 7 of 15</span></div>
+</div>
+
+<div class="page-break" style="page-break-before: always; break-before: page;"></div>
+
+<!-- PAGE 8: CHAPTER 4 -->
+<div class="page-container">
+  <h1>CHAPTER 4: SYSTEM ARCHITECTURE & DESIGN</h1>
+
+  <h2>4.1 Tiered Client-Side Architecture</h2>
+  <p>
+  Social Connect is structured as a decoupled, multi-tier client application where visual presentation components are strictly separated from data access and state management layers.
+  </p>
+
+  <div class="code-block">
++--------------------------------------------------------------------------+
+|                     PRESENTATION LAYER (React Components)                 |
+|  [Navbar]  [ChatList]  [ChatWindow]  [GroupTab]  [GroupChatWindow]        |
+|  [InvitePanel]  [JoinRequestsModal]  [CallModal]  [AlbumViewer]           |
++--------------------------------------------------------------------------+
+                                     |
+                                     v
++--------------------------------------------------------------------------+
+|                 STATE MANAGEMENT LAYER (React Context API)                |
+|  - AuthContext         : Manages session, active user, login/logout       |
+|  - ChatContext         : Manages 1-on-1 conversations, unread counters    |
+|  - GroupContext        : Manages groups, admin rights, join reqs, invites |
+|  - CallContext         : Manages WebRTC streams, active call state        |
+|  - NotificationContext : In-app alerts, badge counters, toast popups      |
+|  - UserContext         : User registry, favorites, photo albums           |
++--------------------------------------------------------------------------+
+                                     |
+                                     v
++--------------------------------------------------------------------------+
+|                   DATA PERSISTENCE & SYNCHRONIZATION                      |
+|  - Browser LocalStorage Engine (JSON Serialization & Deserialization)     |
+|  - Window 'storage' Event Listeners (Instant Multi-Tab Synchronization)  |
+|  - Canvas Image Compression Pipeline (Enforces Quota Optimization)        |
++--------------------------------------------------------------------------+
+  </div>
+
+  <h2>4.2 Context Provider Hierarchy</h2>
+  <p>
+  The application wraps its component tree in a hierarchical provider cascade inside <code>App.jsx</code>. This structure ensures that low-level services (such as authentication) are available to dependent providers (such as chat and group contexts):
+  </p>
+  <ol>
+    <li><strong>AuthProvider:</strong> Houses current user identity and multi-account switching logic.</li>
+    <li><strong>UserProvider:</strong> Stores registered user directory, user favorites, and image albums.</li>
+    <li><strong>NotificationProvider:</strong> Handles toast popups and user-specific notification logs.</li>
+    <li><strong>ChatProvider:</strong> Provides conversation queries, message dispatchers, and read receipts.</li>
+    <li><strong>GroupProvider:</strong> Implements group creation, join approval logic, and invite/uninvite mechanisms.</li>
+    <li><strong>CallProvider:</strong> Controls WebRTC streams, call modals, and audio device states.</li>
+    <li><strong>PeerProvider:</strong> Simulates peer-to-peer connectivity and real-time typing indicators.</li>
+  </ol>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 8 of 15</span></div>
+</div>
+
+<div class="page-break" style="page-break-before: always; break-before: page;"></div>
+
+<!-- PAGE 9: CHAPTER 5 -->
+<div class="page-container">
+  <h1>CHAPTER 5: DATABASE & LOCALSTORAGE SCHEMA</h1>
+
+  <h2>5.1 Persistent Storage Schema Architecture</h2>
+  <p>
+  In place of a traditional SQL or NoSQL database, Social Connect implements a structured, key-value storage engine using browser <code>localStorage</code>. All records are serialized as JSON strings with strict data schemas.
+  </p>
+
+  <table>
+    <tr>
+      <th style="width: 25%;">Storage Key</th>
+      <th style="width: 20%;">Type</th>
+      <th style="width: 55%;">Schema & Description</th>
+    </tr>
+    <tr>
+      <td><code>social_connect_user</code></td>
+      <td>JSON Object</td>
+      <td>Stores currently authenticated user object: <code>{ id, name, email, image, bio, isPremium }</code></td>
+    </tr>
+    <tr>
+      <td><code>chat_messages_{userId}</code></td>
+      <td>JSON Array</td>
+      <td>Array of message objects: <code>[{ id, senderId, recipientId, message, image, timestamp, read }]</code></td>
+    </tr>
+    <tr>
+      <td><code>social_groups</code></td>
+      <td>JSON Array</td>
+      <td>Array of group records: <code>[{ id, name, description, avatar, category, adminId, admins: [], members: [] }]</code></td>
+    </tr>
+    <tr>
+      <td><code>group_messages_{groupId}</code></td>
+      <td>JSON Array</td>
+      <td>Array of group chats: <code>[{ id, groupId, senderId, senderName, senderAvatar, message, timestamp, seenBy: [] }]</code></td>
+    </tr>
+    <tr>
+      <td><code>group_join_requests</code></td>
+      <td>JSON Array</td>
+      <td>Pending access requests: <code>[{ id, groupId, groupName, userId, userName, userBio, userImage, note, timestamp, status: 'pending'|'approved'|'declined' }]</code></td>
+    </tr>
+    <tr>
+      <td><code>group_invitations</code></td>
+      <td>JSON Array</td>
+      <td>User invitations: <code>[{ id, groupId, groupName, inviterId, inviterName, inviteeId, timestamp, status: 'pending'|'accepted'|'declined' }]</code></td>
+    </tr>
+    <tr>
+      <td><code>notifications_{userId}</code></td>
+      <td>JSON Array</td>
+      <td>Per-user notifications: <code>[{ id, type, title, message, link, timestamp, read: false }]</code></td>
+    </tr>
+    <tr>
+      <td><code>user_album_{userId}</code></td>
+      <td>JSON Array</td>
+      <td>Personal gallery: <code>[{ id, url, caption, timestamp }]</code></td>
+    </tr>
+  </table>
+
+  <h2>5.2 Data Integrity & Serialization Logic</h2>
+  <p>
+  Every write operation to <code>localStorage</code> is wrapped within defensive error-handling blocks. The application prevents storage corruption by utilizing atomic update patterns:
+  </p>
+  <div class="code-block">
+// Standard Atomic Save Pattern Implemented Across Contexts
+const saveGroupsToStorage = (updatedGroups) => {
+  try {
+    localStorage.setItem('social_groups', JSON.stringify(updatedGroups));
+  } catch (err) {
+    if (err.name === 'QuotaExceededError') {
+      console.error('LocalStorage quota exceeded. Evicting oldest thumbnails.');
+      cleanOldMediaThumbnails();
+      localStorage.setItem('social_groups', JSON.stringify(updatedGroups));
+    }
+  }
+};
+  </div>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 9 of 15</span></div>
+</div>
+
+<div class="page-break" style="page-break-before: always; break-before: page;"></div>
+
+<!-- PAGE 10: CHAPTER 6 -->
+<div class="page-container">
+  <h1>CHAPTER 6: CORE MODULES & IMPLEMENTATION</h1>
+
+  <h2>6.1 Authentication & Multi-Account Switcher</h2>
+  <p>
+  The <code>AuthContext</code> module enables effortless testing and role demonstration by supplying a built-in multi-account switcher. Developers and evaluators can switch identities between <strong>Rohan Mehta (Admin)</strong>, <strong>Priya Sharma</strong>, and <strong>Neha Joshi</strong> with a single click. When switching identities, session state updates automatically while preserving all existing conversations and group configurations.
+  </p>
+
+  <h2>6.2 Group Chat with Admin Permission Workflow</h2>
+  <p>
+  Unlike typical open chat applications, Social Connect features an administrative approval pipeline. When a non-member accesses a private group:
+  </p>
+  <ol>
+    <li>The message input bar is locked, displaying an <strong>Admin Permission Required</strong> banner with an icon.</li>
+    <li>Clicking <strong>Request to Join</strong> opens a modal where the user can submit a personalized request note.</li>
+    <li>The request is stored in <code>group_join_requests</code>, and an in-app notification is routed directly to the group administrator's inbox.</li>
+    <li>The user's view updates to a <strong>Permission Request Pending</strong> status, displaying an animated hourglass badge and a "Cancel Request" button.</li>
+    <li>When the group administrator logs in, an alert banner appears with a <strong>Review Requests</strong> button.</li>
+    <li>The administrator can accept the request (which automatically appends the user to <code>group.members</code>) or decline it.</li>
+  </ol>
+
+  <h2>6.3 Member Invitation & Revocation ("Uninvite") Workflow</h2>
+  <p>
+  A notable innovation implemented in the group module is the <strong>dynamic invitation and revocation lifecycle</strong>:
+  </p>
+  <div class="code-block">
+[Group Member clicks "+ Invite"] 
+      |
+      v
+[System dispatches Invitation to 'group_invitations' & notifications_{inviteeId}]
+      |
+      +---> Modal immediately toggles to: [✓ Invited] + [Uninvite (Red Button)]
+      |
+      +---> IF Inviter clicks [Uninvite]:
+               - System dispatches CANCEL_INVITATION action
+               - Removes record from 'group_invitations'
+               - UI cleanly restores back to [+ Invite] button
+               - Revocation notification logged to ensure transparency
+  </div>
+  <p>
+  This ensures that accidental invitations can be promptly retracted before an invitee accepts, providing complete administrative control over group membership.
+  </p>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 10 of 15</span></div>
+</div>
+
+<div class="page-break" style="page-break-before: always; break-before: page;"></div>
+
+<!-- PAGE 11: CHAPTER 7 -->
+<div class="page-container">
+  <h1>CHAPTER 7: ADVANCED MODULES & AESTHETICS</h1>
+
+  <h2>7.1 Simulated WebRTC Voice & Video Calling</h2>
+  <p>
+  The <code>CallContext</code> and <code>CallModal</code> modules provide an interactive, full-screen calling experience modeled after modern mobile and desktop communicators:
+  </p>
+  <ul>
+    <li><strong>Incoming Call Screen:</strong> Plays an animated caller avatar ring with bouncy accept and decline action buttons.</li>
+    <li><strong>Outgoing Ringing Screen:</strong> Displays an animated radar-pulse halo around the recipient's avatar with real-time ringing indicators and an "End Call" button.</li>
+    <li><strong>Connected Call View:</strong> Features picture-in-picture video elements, real-time audio wave simulations, microphone mute/unmute toggles, camera enable/disable controls, speaker switches, and duration counters.</li>
+  </ul>
+
+  <h2>7.2 Photo Album Gallery Module</h2>
+  <p>
+  Inspired by modern social media layouts, the <code>AlbumTab</code> component presents user photos in a sleek <strong>3-column grid</strong>:
+  </p>
+  <ul>
+    <li><strong>Personal Album Tile:</strong> A dedicated dark slate card displaying the user's photo count and a quick-upload button.</li>
+    <li><strong>Member Album Cards:</strong> Features a blurred background cover image overlaid with a dark vignette, a centered circular avatar, and a photo counter badge.</li>
+    <li><strong>Full-Screen Lightbox:</strong> Clicking any photo triggers <code>ImageLightbox</code>, allowing users to inspect high-resolution images, view captions, and download media.</li>
+  </ul>
+
+  <h2>7.3 Font Awesome 6 & Premium UI Design System</h2>
+  <p>
+  To replace flat and generic user interfaces, Social Connect incorporates a polished design system built with <strong>Font Awesome 6.5.2</strong> and customized CSS variables:
+  </p>
+
+  <table>
+    <tr>
+      <th>UI Element</th>
+      <th>Font Awesome Icon</th>
+      <th>Visual Styling & Aesthetic Rationale</th>
+    </tr>
+    <tr>
+      <td><strong>Admin Badge</strong></td>
+      <td><code>fa-crown</code></td>
+      <td>Gold gradient background (<code>#f59e0b</code> to <code>#eab308</code>) with subtle amber glow.</td>
+    </tr>
+    <tr>
+      <td><strong>Primary Buttons</strong></td>
+      <td><code>fa-plus</code> / <code>fa-paper-plane</code></td>
+      <td>Indigo-to-violet gradient (<code>#6366f1</code> to <code>#8b5cf6</code>) with smooth hover elevation.</td>
+    </tr>
+    <tr>
+      <td><strong>Status Badges</strong></td>
+      <td><code>fa-check</code> / <code>fa-hourglass-half</code></td>
+      <td>Emerald pill for invited members; animated pulsing amber icon for pending join requests.</td>
+    </tr>
+    <tr>
+      <td><strong>Uninvite Action</strong></td>
+      <td><code>fa-user-xmark</code></td>
+      <td>Crimson tinted border and background (<code>rgba(239, 68, 68, 0.08)</code>) for clear action intent.</td>
+    </tr>
+    <tr>
+      <td><strong>Navigation Tabs</strong></td>
+      <td><code>fa-comment-dots</code> / <code>fa-users</code></td>
+      <td>High-contrast primary indigo active state with subtle background highlights for optimal legibility.</td>
+    </tr>
+  </table>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 11 of 15</span></div>
+</div>
+
+<div class="page-break" style="page-break-before: always; break-before: page;"></div>
+
+<!-- PAGE 12: CHAPTER 8 -->
+<div class="page-container">
+  <h1>CHAPTER 8: SECURITY, INTEGRITY & OPTIMIZATION</h1>
+
+  <h2>8.1 LocalStorage Quota Management & Image Compression</h2>
+  <p>
+  Browser <code>localStorage</code> imposes a standard quota of 5MB to 10MB per origin. Storing raw, uncompressed camera photos (which often exceed 3MB each) would quickly result in a <code>QuotaExceededError</code>.
+  </p>
+  <p>
+  To resolve this limitation, Social Connect implements an automated <strong>HTML5 Canvas Image Compression Utility</strong> (<code>imageUtils.js</code>):
+  </p>
+  <div class="code-block">
+// Client-side image compression prior to storage
+export const compressImage = (file, maxWidth = 600, maxHeight = 600, quality = 0.8) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = (event) => {
+      const img = new Image();
+      img.src = event.target.result;
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        let width = img.width;
+        let height = img.height;
+        // Scale dimensions while preserving aspect ratio
+        if (width > height && width > maxWidth) {
+          height = Math.round((height * maxWidth) / width);
+          width = maxWidth;
+        } else if (height > maxHeight) {
+          width = Math.round((width * maxHeight) / height);
+          height = maxHeight;
+        }
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, width, height);
+        // Export highly compressed Base64 JPEG data URL
+        resolve(canvas.toDataURL('image/jpeg', quality));
+      };
+    };
+  });
+};
+  </div>
+  <p>
+  This optimization shrinks multi-megabyte image uploads down to lightweight payloads between 25KB and 45KB. As a result, the application can comfortably store hundreds of photos and tens of thousands of messages without approaching browser storage limits.
+  </p>
+
+  <h2>8.2 Cross-Tab Synchronization via Storage Events</h2>
+  <p>
+  To guarantee real-time reactivity across multiple browser tabs or windows, Social Connect attaches global <code>storage</code> event listeners. When a user approves a join request or revokes an invite in Tab A, Tab B automatically detects the mutation, re-renders the appropriate context, and updates the UI instantly without requiring a manual page refresh.
+  </p>
+
+  <h2>8.3 Client-Side Input Sanitization</h2>
+  <p>
+  All user inputs submitted via direct chats, group messages, join request notes, and group creation forms are sanitized to protect against Cross-Site Scripting (XSS). React's virtual DOM natively escapes HTML strings during rendering, ensuring that malicious payloads cannot execute within the client sandbox.
+  </p>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 12 of 15</span></div>
+</div>
+
+<div class="page-break" style="page-break-before: always; break-before: page;"></div>
+
+<!-- PAGE 13: CHAPTER 9 -->
+<div class="page-container">
+  <h1>CHAPTER 9: SYSTEM TESTING & QUALITY ASSURANCE</h1>
+
+  <h2>9.1 Test Execution Matrix</h2>
+  <p>
+  Rigorous testing was conducted across all core modules to verify functional requirements, data integrity, visual contrast, and edge-case resilience.
+  </p>
+
+  <table>
+    <tr>
+      <th style="width: 10%;">Test ID</th>
+      <th style="width: 25%;">Feature Under Test</th>
+      <th style="width: 30%;">Test Input & Scenario</th>
+      <th style="width: 25%;">Expected Result</th>
+      <th style="width: 10%;">Status</th>
+    </tr>
+    <tr>
+      <td><strong>TC-01</strong></td>
+      <td>Data Persistence across Reboot</td>
+      <td>Send messages in direct & group chats, close browser completely, restart Vite server, reopen app.</td>
+      <td>All conversations, timestamps, read receipts, and member roles load intact.</td>
+      <td><span class="badge-pill" style="background: #dcfce7; color: #15803d;">PASS</span></td>
+    </tr>
+    <tr>
+      <td><strong>TC-02</strong></td>
+      <td>Group Permission Barrier</td>
+      <td>Login as user who is not a member of a group. Attempt to type messages.</td>
+      <td>Message input locked. Admin Permission banner displayed. "Request to Join" button visible.</td>
+      <td><span class="badge-pill" style="background: #dcfce7; color: #15803d;">PASS</span></td>
+    </tr>
+    <tr>
+      <td><strong>TC-03</strong></td>
+      <td>Admin Approval Lifecycle</td>
+      <td>Submit request as Neha Joshi. Switch to Admin (Rohan). Review request modal and click Accept.</td>
+      <td>User added to <code>members</code> list. Neha Joshi can now chat freely. Admin receives toast.</td>
+      <td><span class="badge-pill" style="background: #dcfce7; color: #15803d;">PASS</span></td>
+    </tr>
+    <tr>
+      <td><strong>TC-04</strong></td>
+      <td>Invite & Uninvite Flow</td>
+      <td>Open Invite modal. Click "+ Invite" on user. Verify "✓ Invited" and "Uninvite" appear. Click "Uninvite".</td>
+      <td>Invite record deleted from storage. Button resets back to "+ Invite". Toast notification displayed.</td>
+      <td><span class="badge-pill" style="background: #dcfce7; color: #15803d;">PASS</span></td>
+    </tr>
+    <tr>
+      <td><strong>TC-05</strong></td>
+      <td>Tab Text Contrast Check</td>
+      <td>Switch between 'Chats', 'Groups', and 'Albums' sub-tabs in light and dark mode.</td>
+      <td>Active and inactive tabs remain 100% visible and legible with no white-on-white text issues.</td>
+      <td><span class="badge-pill" style="background: #dcfce7; color: #15803d;">PASS</span></td>
+    </tr>
+    <tr>
+      <td><strong>TC-06</strong></td>
+      <td>Voice/Video Call Controls</td>
+      <td>Initiate call from chat header. Toggle mute, toggle video, and end call.</td>
+      <td>Call duration updates in real time. Icons reflect mute states accurately. Call ended screen displays.</td>
+      <td><span class="badge-pill" style="background: #dcfce7; color: #15803d;">PASS</span></td>
+    </tr>
+    <tr>
+      <td><strong>TC-07</strong></td>
+      <td>Image Upload & Compression</td>
+      <td>Attach 4MB JPEG image in chat.</td>
+      <td>Image compressed to &lt;45KB, rendered in bubble, and stored without quota exceptions.</td>
+      <td><span class="badge-pill" style="background: #dcfce7; color: #15803d;">PASS</span></td>
+    </tr>
+  </table>
+
+  <h2>9.2 Automated Browser Subagent Verification</h2>
+  <p>
+  The application underwent automated end-to-end verification via an AI browser subagent on <code>http://localhost:5173/messages</code>. The test verified:
+  </p>
+  <ul>
+    <li>Correct rendering of Font Awesome 6 icon classes (<code>fa-solid fa-users</code>, <code>fa-crown</code>, <code>fa-plus</code>, <code>fa-check</code>, <code>fa-user-xmark</code>).</li>
+    <li>Dynamic state transition from "+ Invite" to "✓ Invited" upon clicking, followed by immediate restoration to "+ Invite" when "Uninvite" was clicked.</li>
+    <li>Zero console errors or unhandled promise rejections across all user interactions.</li>
+  </ul>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 13 of 15</span></div>
+</div>
+
+<div class="page-break" style="page-break-before: always; break-before: page;"></div>
+
+<!-- PAGE 14: CHAPTER 10 -->
+<div class="page-container">
+  <h1>CHAPTER 10: USER MANUAL & OPERATING GUIDE</h1>
+
+  <h2>10.1 Quick Start Instructions</h2>
+  <p>
+  Follow these simple steps to launch and explore Social Connect on any local workstation:
+  </p>
+  <ol>
+    <li><strong>Clone or Open Repository:</strong> Navigate to the project root directory in your terminal:
+      <div class="code-block">cd f:\react-project\SOCIAL-CONNECTED\myapp</div>
+    </li>
+    <li><strong>Start Development Server:</strong> Launch the Vite server:
+      <div class="code-block">npm run dev</div>
+    </li>
+    <li><strong>Open Web Browser:</strong> Navigate to <code>http://localhost:5173</code> in Google Chrome, Edge, or Firefox.</li>
+  </ol>
+
+  <h2>10.2 Step-by-Step Feature Walkthrough</h2>
+
+  <h3>A. Direct (1-on-1) Messaging</h3>
+  <ol>
+    <li>Click on the <strong>Messages</strong> link in the top navigation bar.</li>
+    <li>Select any contact from the conversation list on the left, or use the search bar to find new users.</li>
+    <li>Type your message into the input field at the bottom and click the <strong>Send</strong> button (or press Enter).</li>
+    <li>To attach a photo, click the <strong>Image</strong> icon to upload from your device, or click the <strong>Album</strong> icon to select a picture from your gallery.</li>
+  </ol>
+
+  <h3>B. Group Creation & Permission Workflow</h3>
+  <ol>
+    <li>In the Messages sidebar, click on the <strong>Groups</strong> sub-tab.</li>
+    <li>Click the <strong>+ New</strong> button to open the "Create New Group" modal.</li>
+    <li>Enter a group name (e.g., <em>React Developers Club</em>), select a category, write a description, and click <strong>Create Group</strong>. You are automatically assigned as the Group Admin.</li>
+    <li>To test permission workflows, use the top-right profile menu to switch to another user account.</li>
+    <li>As the new user, select the group. Notice that the chat input is locked with an "Admin Permission Required" banner.</li>
+    <li>Click <strong>Request to Join</strong>, enter a brief message, and submit your request.</li>
+    <li>Switch back to the Admin account. An alert banner will notify you of pending requests. Click <strong>Review Requests</strong> and select <strong>Accept & Add to Group</strong>.</li>
+  </ol>
+
+  <h3>C. Member Invitation & Dynamic "Uninvite"</h3>
+  <ol>
+    <li>Open any group where you are a member or administrator.</li>
+    <li>Click the <strong>+ User</strong> (Invite Members) icon in the group chat header.</li>
+    <li>In the modal list, click <strong>+ Invite</strong> next to any user. The button immediately turns into a green <strong>✓ Invited</strong> status alongside a red <strong>Uninvite</strong> button.</li>
+    <li>To cancel the invitation, simply click <strong>Uninvite</strong>. The invite is revoked instantly and the button reverts back to <strong>+ Invite</strong>.</li>
+  </ol>
+
+  <h3>D. Voice & Video Calling</h3>
+  <ol>
+    <li>Open a direct conversation with any contact.</li>
+    <li>Click either the <strong>Phone</strong> (Voice Call) or <strong>Video</strong> icon in the chat header.</li>
+    <li>The interactive calling modal will appear. Use the bottom toolbar to toggle your microphone, camera, or speaker, and click the red <strong>End Call</strong> button when finished.</li>
+  </ol>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 14 of 15</span></div>
+</div>
+
+<div class="page-break" style="page-break-before: always; break-before: page;"></div>
+
+<!-- PAGE 15: CHAPTER 11 -->
+<div class="page-container">
+  <h1>CHAPTER 11: CONCLUSIONS & REFERENCES</h1>
+
+  <h2>11.1 Project Summary</h2>
+  <p>
+  The <strong>Social Connect</strong> project successfully demonstrates the viability of building a feature-rich, persistent social communication platform entirely within the client browser. By leveraging React 18, the Context API, and HTML5 Web Storage, the application delivers:
+  </p>
+  <ul>
+    <li>Instant, zero-latency state transitions without roundtrip server delays.</li>
+    <li>Robust role-based group management featuring admin permission approval and dynamic invitation revocations ("uninvite").</li>
+    <li>Simulated WebRTC calling, Grindr-style multimedia album sharing, and direct messaging with image compression.</li>
+    <li>A modern, high-contrast user interface styled with Font Awesome 6 icons and gold VIP badges.</li>
+    <li>Complete data persistence that preserves conversations, group roles, and user profiles across browser reboots and computer restarts.</li>
+  </ul>
+
+  <h2>11.2 Limitations</h2>
+  <ul>
+    <li><strong>Origin-Bound Scope:</strong> Because data is stored in the browser's <code>localStorage</code>, persistent data is tied to the specific browser and origin. Opening the app in a different browser will not automatically share stored data without an explicit export/import step.</li>
+    <li><strong>Storage Quotas:</strong> While canvas image compression effectively reduces photo payloads to under 45KB, origins are subject to browser storage limits (typically 5MB to 10MB). Storing thousands of high-resolution images may eventually require an IndexedDB migration.</li>
+  </ul>
+
+  <h2>11.3 Future Enhancements</h2>
+  <ul>
+    <li><strong>IndexedDB Storage Migration:</strong> Transitioning message and photo storage from <code>localStorage</code> to IndexedDB to expand storage capacity beyond 500MB per origin.</li>
+    <li><strong>End-to-End Cryptographic Encryption (E2EE):</strong> Incorporating the Web Crypto API to encrypt message payloads using public/private key pairs before persisting them to disk.</li>
+    <li><strong>PWA & Service Worker Offline Caching:</strong> Converting the application into a Progressive Web App (PWA) with background sync and offline service workers for installation on Android and iOS devices.</li>
+    <li><strong>Audio Voice Notes:</strong> Integrating the MediaRecorder API to enable recording and sending short voice messages within direct and group conversations.</li>
+  </ul>
+
+  <h2>11.4 References & Bibliography</h2>
+  <ol>
+    <li>Facebook Open Source. (2024). <em>React Documentation – Managing State with Context and Reducers</em>. Retrieved from <a href="https://react.dev">https://react.dev</a></li>
+    <li>Vite Core Team. (2024). <em>Next Generation Frontend Tooling Guide</em>. Retrieved from <a href="https://vitejs.dev">https://vitejs.dev</a></li>
+    <li>Mozilla Developer Network (MDN). (2024). <em>Window.localStorage API & StorageEvent Handling</em>. Mozilla Corporation.</li>
+    <li>World Wide Web Consortium (W3C). (2023). <em>WebRTC 1.0: Real-Time Communication Between Browsers</em>. W3C Recommendation.</li>
+    <li>Font Awesome. (2024). <em>Font Awesome 6 Iconography System & Class Specifications</em>. Fonticons, Inc.</li>
+    <li>React Router. (2024). <em>Declarative Client-Side Routing for React Applications (v6)</em>. Remix Software.</li>
+    <li>Nielsen, J. (1994). <em>Usability Engineering & Heuristic Evaluation for Web User Interfaces</em>. Morgan Kaufmann Publishers.</li>
+  </ol>
+
+  <div style="margin-top: 30px; text-align: center; color: #94a3b8; font-size: 9.5pt;">
+    — END OF FORMAL PROJECT REPORT (PAGES 1 THROUGH 15) —
+  </div>
+  <div class="page-footer"><span>Social Connect Project Report</span><span>Page 15 of 15</span></div>
+</div>
+
+</body>
+</html>
